@@ -146,7 +146,7 @@ class NetworkSimGUI(QWidget):
         index = 0
 
         # Print text logs in order of time
-        while sorted_sender and sorted_receiver:
+        while sorted_sender or sorted_receiver:
             if not sorted_receiver or sorted_sender[0] < sorted_receiver[0]:
                 self.log_sender(f"({index}) {sender_text[sorted_sender[0]]}")
                 self.log_receiver(f"({index})")
